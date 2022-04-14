@@ -1,6 +1,7 @@
 const path = require('path')
 const execSync = require('child_process').execSync;
 const P = require('pino')
+const fetch = require('node-fetch')
 const { 
 default: makeWASocket, 
 DisconnectReason, 
@@ -22,6 +23,17 @@ const axios = require('axios')
 const { Boom } = require("@hapi/boom")
 const { state, loadState, saveState } = useSingleFileAuthState("./chan.json")
 const store = makeInMemoryStore({ logger: P().child({ level: 'silent', stream: 'store' }) })
+
+function getConf(data) {
+ fetch(__dirname + '/custom.json')
+    .then(function(res) {
+        return res.json();
+    }).then(function(json) {
+      const baku = JSON.parse(json);
+      const hasil = baku.data;
+     return hasil
+  });
+}
 
 
 const getVersionWaweb = () => {
@@ -56,9 +68,11 @@ const isiChat = text
 if (!msg.key.fromMe && m.type === 'notify') {
 
 if (isiChat.includes("bet") || isiChat.includes("slot") || isiChat.includes("Slot") || isiChat.includes("judi") || isiChat.includes("Judi")) {
- chan.sendMessage(msg.key.remoteJid, { text: `Maaf, kita tidak mau berjudi dan GAK AKAN PERNAH JUDI. Terimakasih atas tawarannya.`})
+ chan.sendMessage(msg.key.remoteJid, { text: `${getConf(pesan)}`})
  await delay(800)
+ if (getConf(block) === "true"{
  await chan.updateBlockStatus(msg.key.remoteJid, "block")
+ }
 }             
 }
 })
