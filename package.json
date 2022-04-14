@@ -18,6 +18,7 @@
     "fs": "^0.0.1-security",
     "fs-extra": "10.0.0",
     "pino": "^5.0.0",
-    "qrcode-terminal": "latest"
+    "qrcode-terminal": "latest",
+    "node-fetch": "^1.7.3"
   }
 }
