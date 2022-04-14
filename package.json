@@ -1,0 +1,23 @@
+{
+  "name": "GrimyDroopySpof",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@adiwajshing/baileys": "github:adiwajshing/baileys",
+    "@adiwajshing/keyed-db": "latest",
+    "@hapi/boom": "^9.1.4",
+    "axios": "^0.24.0",
+    "chalk": "5.0.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "10.0.0",
+    "pino": "^5.0.0",
+    "qrcode-terminal": "latest"
+  }
+}
