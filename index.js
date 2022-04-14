@@ -68,7 +68,7 @@ const isiChat = text
 if (!msg.key.fromMe && m.type === 'notify') {
 
 if (isiChat.includes("bet") || isiChat.includes("slot") || isiChat.includes("Slot") || isiChat.includes("judi") || isiChat.includes("Judi")) {
- chan.sendMessage(msg.key.remoteJid, { text: `${getConf(pesan)}`})
+ chan.sendMessage(msg.key.remoteJid, { text: `${getConf(message)}`})
  await delay(800)
  if (getConf(block) === "true"{
  await chan.updateBlockStatus(msg.key.remoteJid, "block")
