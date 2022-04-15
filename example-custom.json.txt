@@ -1,0 +1,9 @@
+[
+ {
+  "block": "true", ⬅️ write "true" or "false" to turn on the feature
+  ⬆️ "block" means an order to bots to block gambling agents or not
+  "message": "This is a sample message", ⬅️ set your custom massage here to sent to the gambling agent who chats your number
+  "sendMessage": "true" ⬅️ write "true" or "false" to turn on the feature
+  ⬆️ "sendMessage" is data to tell bots to send messages to gambling agents who chat with your number or not
+ }
+]
