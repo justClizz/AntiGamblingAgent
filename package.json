@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
+    "fs": "latest",
     "@adiwajshing/keyed-db": "latest",
     "@hapi/boom": "^9.1.4",
     "axios": "^0.24.0",
